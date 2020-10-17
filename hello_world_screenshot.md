@@ -1,1 +1,0 @@
-![Hello World Screenshot](https://github.com/adashoka/images/blob/master/screen_shot.PNG)
