@@ -25,3 +25,13 @@ signals from the environment with different priorities.
 
 [3] Response time: the device can't be sluggish in responding to signals from
 the environment
+
+[4] Test and Debug: Test and debug with limited debug registers will make this challenging
+
+[5] Verification/Validation: Simulating all possible real world scenario will make the 
+testing and validation effort challenging
+
+[6] Response time test: The device needs to respond within a fixed time. This means 
+the device needs to be tested under worst case conditions -- where there are multiple
+high priority signals from the environment all happening at the same time. Designing
+unit tests that simulate these conditions will be challenging. 
