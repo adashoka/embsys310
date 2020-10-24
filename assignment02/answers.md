@@ -108,6 +108,22 @@
 
 //question 5
 //##############################################################################################
+5.a: global scope
+5.b: variable is not visible in locals view
+5.c: we can track counter value in three windows:[1] auto window, [2] watch window, [3] memory window
+5.d: 0x20000000
+
+
+
+//question 6
+//##############################################################################################
+6.a: the value of the counter is 6
+6.b: the counter value changes because the statements: [a] ++(*p_int), and [b] counter++, both
+operate (increment by one operation) on 0x20000000 memory location which is the
+location of the counter variable.
+
+
+
 
 
 
