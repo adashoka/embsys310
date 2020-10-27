@@ -5,16 +5,16 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\Debug\List\CounterProjectARM.map</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\config\linker\ST\stm32l475xG.icf</file>
             <file>$PROJ_DIR$\main.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32l475xG.icf</file>
             <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\List\CounterProjectARM.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
             <file>$PROJ_DIR$\Debug\Exe\CounterProjectARM.out</file>
             <file>$PROJ_DIR$\Debug\Obj\CounterProjectARM.pbd</file>
         </outputs>
@@ -31,16 +31,16 @@
             <name>$PROJ_DIR$\main.c</name>
             <outputs>
                 <tool>
-                    <name>ICCARM</name>
-                    <file> 9</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
+                    <name>BICOMP</name>
                     <file> 5</file>
                 </tool>
                 <tool>
-                    <name>BICOMP</name>
-                    <file> 8</file>
+                    <name>ICCARM</name>
+                    <file> 2</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 4</file>
                 </tool>
             </outputs>
         </file>
@@ -55,7 +55,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 6 9 2 0 4 1</file>
+                    <file> 1 2 8 7 9 6</file>
                 </tool>
             </inputs>
         </file>
