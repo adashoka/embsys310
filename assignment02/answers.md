@@ -16,7 +16,7 @@
 1.a: -2147483648<br />
 1.b: 0x80000000<br />
 1.c: N=1, V=1<br />
-	--------------------<br />
+	\\--------------------<br />
 	N flag answer<br />
 	
 	Negative condition flag is set to bit 31 of the result of the <br />
@@ -30,7 +30,7 @@
 	side-note: the general purpose registers are not signed or unsigned. To the hardware<br />
 	they are just sequnce of bits.<br />
 	
-	--------------------<br />
+	\\--------------------<br />
 	V flag answer<br />
 	
 	V bit represents the overflow condition flag. The V bit is set to one because the<br />
