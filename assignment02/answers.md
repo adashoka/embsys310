@@ -16,40 +16,39 @@
 1.a: -2147483648<br />
 1.b: 0x80000000<br />
 1.c: N=1, V=1<br />
-	\\--------------------<br />
-	N flag answer<br />
-	
-	Negative condition flag is set to bit 31 of the result of the <br />
-	last flag-setting instruction.<br />
-	
-	Result value (counter variable) after 1 increment: 0x80000000. And,<br />
-	0x8000_0000 in binary is : 1000_0000_0000_0000_0000_0000_0000_0000<br />
-	
-	The MSB (bit 32 of counter variable) causes the N bit to be set to 1.<br />
-	
-	side-note: the general purpose registers are not signed or unsigned. To the hardware<br />
-	they are just sequnce of bits.<br />
-	
-	\\--------------------<br />
-	V flag answer<br />
-	
-	V bit represents the overflow condition flag. The V bit is set to one because the<br />
-	general purpose register transitions from 0x7FFF_FFFF to 0x8000_0000.<br />
-	
-	If the application is using the counter variable as a signed value, <br />
-	this would represent a overflow condition. The hardware need to a way to keep track of this<br />
-	transition (from 0x7FFF_FFFF to 0x80000_0000) and the V bit is way to do that.<br />
-	
-	--------------------<br />
-	side note: The hardware has no concept of Positive or negative numbers. It's just a sequence<br />
-	of bits. The:<br />
-	
-	[1] N flag is exposed to the software so that it can infer that the value that it's dealing with<br />
-	is a negative number (in case the variable is treated as a signed number)<br />
-	
-	[2] V flag is exposed to the software to infer a rollover from the most positive value to the most<br />
-	negative value.<br />
-	(in case the application is using this variable as a signed variable)<br /><br />
+N flag answer<br />
+
+Negative condition flag is set to bit 31 of the result of the <br />
+last flag-setting instruction.<br />
+
+Result value (counter variable) after 1 increment: 0x80000000. And,<br />
+0x8000_0000 in binary is : 1000_0000_0000_0000_0000_0000_0000_0000<br />
+
+The MSB (bit 32 of counter variable) causes the N bit to be set to 1.<br />
+
+side-note: the general purpose registers are not signed or unsigned. To the hardware<br />
+they are just sequnce of bits.<br />
+
+
+V flag answer<br />
+
+V bit represents the overflow condition flag. The V bit is set to one because the<br />
+general purpose register transitions from 0x7FFF_FFFF to 0x8000_0000.<br />
+
+If the application is using the counter variable as a signed value, <br />
+this would represent a overflow condition. The hardware need to a way to keep track of this<br />
+transition (from 0x7FFF_FFFF to 0x80000_0000) and the V bit is way to do that.<br />
+
+
+side note: The hardware has no concept of Positive or negative numbers. It's just a sequence<br />
+of bits. The:<br />
+
+[1] N flag is exposed to the software so that it can infer that the value that it's dealing with<br />
+is a negative number (in case the variable is treated as a signed number)<br />
+
+[2] V flag is exposed to the software to infer a rollover from the most positive value to the most<br />
+negative value.<br />
+(in case the application is using this variable as a signed variable)<br /><br />
 	
 	
 
@@ -62,26 +61,26 @@
 //##############################################################################################<br />
 2.a: 0<br />
 2.b: N=0, V=0<br />
-	--------------------<br />
-	N flag answer<br />
 	
-	Incremeniting 0xFFFF_FFFF by one causes the MSB to be set to zero<br />
-	Therefore, N takes on a value of zero. This operation results in a 33rd bit (not seen).<br />
-	The Carry flag (C) is set to one to indicate the generation of the 33rd bit.<br /><br />
+N flag answer<br />
 	
-	--------------------<br />
-	V flag answer<br />
+Incremeniting 0xFFFF_FFFF by one causes the MSB to be set to zero<br />
+Therefore, N takes on a value of zero. This operation results in a 33rd bit (not seen).<br />
+The Carry flag (C) is set to one to indicate the generation of the 33rd bit.<br /><br />
 	
-	The V flag is only set if the counter transitions over from 0x7FFF_FFFF to 0x8000_0000.<br /><br />
-	--------------------<br />
-	side note: The hardware has no concept of Positive or negative numbers. It's just a sequence<br />
-	of bits. The:<br />
 	
-	[1] V flag is exposed to the software to be used to infer a rollover of the most positive value.<br />
-	(in case the application is using this variable as a signed variable)<br />
+V flag answer<br />
+The V flag is only set if the counter transitions over from 0x7FFF_FFFF to 0x8000_0000.<br /><br />
 	
-	[2] the C flag is exposed to the software to infer a rollover from the most positive value to the zero.<br />
-	(in case the application is using this variable as a unsigned variable)<br />
+	
+side note: The hardware has no concept of Positive or negative numbers. It's just a sequence<br />
+of bits. The:<br />
+
+[1] V flag is exposed to the software to be used to infer a rollover of the most positive value.<br />
+(in case the application is using this variable as a signed variable)<br />
+
+[2] the C flag is exposed to the software to infer a rollover from the most positive value to the zero.<br />
+(in case the application is using this variable as a unsigned variable)<br />
 
 	
 	
