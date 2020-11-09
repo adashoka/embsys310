@@ -52,18 +52,12 @@ int main()
    REG_GPIOA_MODE &= 0xFFFFF7FF;
    
    while(1) {
+      counter=1;
       while(counter < 500000) {
          counter++;
       }
-      counter=1;
-   
-      REG_GPIOA_ODR |= ORD5;
-   
-      while(counter < 500000) {
-         counter++;
-      }
-      counter=1;
       
+         
       //0000_0000_0001_0000 : ORD5
       //1111_1111_1110_1111 : ~ORD5
       REG_GPIOA_ODR ^= ORD5;
