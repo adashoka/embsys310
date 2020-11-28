@@ -24,3 +24,6 @@ from the stack into the general purpose registers
 2.d: The compiler pushed a bunch of general purpose registers into the stack. It happened:
 [1] once in the calling(main) function before calling the called function (func1_five),
 [2] once in the called function (func1_five) right at the start
+The processor probably did this to preserve the value of the variables before doing a jump to called function.
+I couldn't understand the why certain registers were pushed into the stack -- on the surface it looked it wouldn't have
+made any difference had the processor not pushed those general porpose registers.
