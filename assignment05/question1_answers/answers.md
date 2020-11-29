@@ -1,0 +1,2 @@
+1.a		:	prior to calling the swap function, the main function stores the input arguments to the swap_pointer into R0 and R1 (general purpose registers)
+1.b		: 	R0, and R1 contains the memory location of the pointers to the x and y variable(pointer to a pointer)
