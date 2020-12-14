@@ -1,6 +1,9 @@
 2.a: 396 bytes
+
 2.b: 8196 bytes
+
 2.c: program in main function is using the most ROM
+
 2.d: not counting stack, it's again main function
 
 3:
