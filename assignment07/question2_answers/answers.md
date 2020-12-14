@@ -16,3 +16,4 @@ ROM usage optimization:
 RAM usage optimization:
 (1) reduce size of Stack -- since embedded SW is tailor made, why use more stack than what is needed? First, understand the input into the function
 and later optimize it for stack usage.
+(2) use const keywoard for true constants
